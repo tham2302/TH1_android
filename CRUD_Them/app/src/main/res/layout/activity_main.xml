@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quan ly"
+        android:textSize="20dp"
+        android:layout_gravity="center"/>
+    <EditText
+        android:id="@+id/tenSach"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhap ten"
+        android:textSize="12dp"/>
+
+    <EditText
+        android:id="@+id/nxb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhap ngay sinh"
+        android:textSize="12dp"/>
+    <EditText
+        android:id="@+id/gioSinh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhap gio sinh"
+        android:textSize="12dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+        <TextView
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:text="Gioi tinh"
+            android:textSize="12dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/nam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nam"
+                    android:textSize="12dp"
+                    android:checked="true"/>
+                <RadioButton
+                    android:id="@+id/nu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nu"
+                    android:textSize="12dp" />
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quoc tich"
+        android:textSize="12dp"/>
+    <Spinner
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btAdd"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Thêm"
+            android:textSize="15dp"
+            android:layout_marginLeft="45dp"
+            android:background="@drawable/rounded_button_2"/>
+        <Button
+            android:id="@+id/btUpdate"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Cập nhật"
+            android:textSize="15dp"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/rounded_button_2"/>
+    </LinearLayout>
+    <SearchView
+        android:id="@+id/searchView"
+        android:queryHint="Tìm kiếm"
+        android:iconifiedByDefault="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclerView">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

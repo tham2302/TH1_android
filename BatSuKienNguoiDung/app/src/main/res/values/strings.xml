@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">BatSuKienNguoiDung</string>
+    <string-array name="phep">
+        <item>+</item>
+        <item>-</item>
+        <item>x</item>
+        <item>:</item>
+    </string-array>
+    <string-array name="country">
+        <item>VietNam</item>
+        <item>Lao</item>
+        <item>ThaiLan</item>
+    </string-array>
+    <string-array name="tech">
+        <item>Android</item>
+        <item>Java</item>
+        <item>Python</item>
+        <item>C++</item>
+        <item>Ajax</item>
+        <item>NodeJS</item>
+    </string-array>
+</resources>
