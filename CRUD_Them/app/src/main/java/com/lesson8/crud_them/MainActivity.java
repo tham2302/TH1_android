@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements BookItemListener,
     private EditText eTenSach, eNxb, eGioSinh;
     private RadioButton enam, enu;
     private Spinner sp;
-    private String[] imgs = {"Viet Nam", "Lao", "Campuchia"};
+    private String[] imgs = {"Việt Nam", "Lào", "Campuchia"};
     private Button btAdd, btUpdate;
     private int pcurr;
     private SearchView searchView;
@@ -56,12 +56,12 @@ public class MainActivity extends AppCompatActivity implements BookItemListener,
                 Book book = new Book();
                 String tenSach = eTenSach.getText().toString();
                 String nxb = eNxb.getText().toString();
-                String gioSinh=eGioSinh.getText().toString();
+                String gioSinh = eGioSinh.getText().toString();
                 Boolean nam = enam.isChecked();
                 Boolean nu = enu.isChecked();
                 String i = sp.getSelectedItem().toString();
                 String img = imgs[Integer.parseInt(i)];
-                if (tenSach.equals("") || nxb.equals("") ||(gioSinh.equals("")) || (nam == false && nu == false)) {
+                if (tenSach.equals("") || nxb.equals("") || (gioSinh.equals("")) || (nam == false && nu == false)) {
                     Toast.makeText(getApplicationContext(), "Nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
                 } else {
                     book.setTenSach(tenSach);
@@ -84,12 +84,12 @@ public class MainActivity extends AppCompatActivity implements BookItemListener,
                 Book book = new Book();
                 String tenSach = eTenSach.getText().toString();
                 String nxb = eNxb.getText().toString();
-                String gioSinh=eGioSinh.getText().toString();
+                String gioSinh = eGioSinh.getText().toString();
                 Boolean nam = enam.isChecked();
                 Boolean nu = enu.isChecked();
                 String i = sp.getSelectedItem().toString();
                 String img = imgs[Integer.parseInt(i)];
-                if (tenSach.equals("") || nxb.equals("") ||(gioSinh.equals("")) || (nam == false && nu == false)) {
+                if (tenSach.equals("") || nxb.equals("") || (gioSinh.equals("")) || (nam == false && nu == false)) {
                     Toast.makeText(getApplicationContext(), "Nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
                 } else {
                     book.setTenSach(tenSach);
@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity implements BookItemListener,
         enam = findViewById(R.id.nam);
         enu = findViewById(R.id.nu);
         eNxb = findViewById(R.id.nxb);
-        eGioSinh=findViewById(R.id.gioSinh);
+        eGioSinh = findViewById(R.id.gioSinh);
         sp = findViewById(R.id.img);
         SpinnerApdapter adapter = new SpinnerApdapter(this);
         sp.setAdapter(adapter);
@@ -137,10 +137,10 @@ public class MainActivity extends AppCompatActivity implements BookItemListener,
         eNxb.setText(book.getNgayXuatBan());
         eGioSinh.setText(book.getGioSinh());
         String img = book.getQuocTich();
-        int p=0;
+        int p = 0;
         for (int i = 0; i < imgs.length; i++) {
             if (img.equals(imgs[i])) {
-                p =i;
+                p = i;
                 break;
             }
         }
@@ -174,27 +174,27 @@ public class MainActivity extends AppCompatActivity implements BookItemListener,
 
     @Override
     public void onClick(View view) {
-        if(view==eGioSinh){
+        if (view == eGioSinh) {
             Calendar c = Calendar.getInstance();
-            int hh=c.get(Calendar.HOUR_OF_DAY);
-            int mm=c.get(Calendar.MINUTE);
-            TimePickerDialog timedialog=new TimePickerDialog(this, new TimePickerDialog.OnTimeSetListener() {
+            int hh = c.get(Calendar.HOUR_OF_DAY);
+            int mm = c.get(Calendar.MINUTE);
+            TimePickerDialog timedialog = new TimePickerDialog(this, new TimePickerDialog.OnTimeSetListener() {
                 @Override
                 public void onTimeSet(TimePicker timePicker, int h, int m) {
-                    eGioSinh.setText(h+":"+m);
+                    eGioSinh.setText(h + ":" + m);
                 }
             }, hh, mm, false);
             timedialog.show();
         }
-        if(view==eNxb){
+        if (view == eNxb) {
             Calendar c = Calendar.getInstance();
-            int y=c.get(Calendar.YEAR);
-            int m=c.get(Calendar.MONTH);
-            int d=c.get(Calendar.DAY_OF_MONTH);
-            DatePickerDialog dialog= new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+            int y = c.get(Calendar.YEAR);
+            int m = c.get(Calendar.MONTH);
+            int d = c.get(Calendar.DAY_OF_MONTH);
+            DatePickerDialog dialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
                 @Override
                 public void onDateSet(DatePicker datePicker, int yy, int mm, int dd) {
-                    eNxb.setText(yy+"/"+(mm+1)+"/"+dd);
+                    eNxb.setText(yy + "/" + (mm + 1) + "/" + dd);
                 }
             }, y, m, d);
             dialog.show();

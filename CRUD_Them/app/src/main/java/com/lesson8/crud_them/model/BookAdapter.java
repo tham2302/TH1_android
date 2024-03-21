@@ -31,7 +31,8 @@ public class BookAdapter extends RecyclerView.Adapter<com.lesson8.crud_them.mode
         mlist = new ArrayList<>();
         listBackup = new ArrayList<>();
     }
-    public List<Book> getBackup(){
+
+    public List<Book> getBackup() {
         return listBackup;
     }
 
@@ -42,10 +43,13 @@ public class BookAdapter extends RecyclerView.Adapter<com.lesson8.crud_them.mode
     public Book getItem(int position) {
         return mlist.get(position);
     }
-    public void filterList(List<Book>filterlist){
-        mlist=filterlist;
-        notifyDataSetChanged();;
+
+    public void filterList(List<Book> filterlist) {
+        mlist = filterlist;
+        notifyDataSetChanged();
+        ;
     }
+
     @NonNull
     @Override
     public BookViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -61,10 +65,9 @@ public class BookAdapter extends RecyclerView.Adapter<com.lesson8.crud_them.mode
         holder.tenSach.setText(book.getTenSach());
         holder.ngaySinh.setText(book.getNgayXuatBan());
         holder.quocTich.setText(book.getQuocTich());
-        if(book.isLaNam()==true){
+        if (book.isLaNam() == true) {
             holder.img.setImageResource(R.drawable.img_nam);
-        }
-        else{
+        } else {
             holder.img.setImageResource(R.drawable.img_nu);
         }
         holder.btRemove.setOnClickListener(new View.OnClickListener() {
@@ -72,7 +75,7 @@ public class BookAdapter extends RecyclerView.Adapter<com.lesson8.crud_them.mode
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
                 builder.setTitle("Thông báo xoá");
-                builder.setMessage("Bạn có chắc chắn muốn xoá "+book.getTenSach()+" không?");
+                builder.setMessage("Bạn có chắc chắn muốn xoá " + book.getTenSach() + " không?");
                 builder.setIcon(R.drawable.img);
                 builder.setPositiveButton("Có", new DialogInterface.OnClickListener() {
                     @Override
@@ -114,7 +117,7 @@ public class BookAdapter extends RecyclerView.Adapter<com.lesson8.crud_them.mode
         notifyDataSetChanged();
     }
 
-    public class BookViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public class BookViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         private TextView tenSach;
         private TextView ngaySinh;
@@ -124,10 +127,10 @@ public class BookAdapter extends RecyclerView.Adapter<com.lesson8.crud_them.mode
 
         public BookViewHolder(@NonNull View view) {
             super(view);
-            tenSach=view.findViewById(R.id.tenSach);
-            ngaySinh=view.findViewById(R.id.ngaySinh);
-            quocTich=view.findViewById(R.id.quocTich);
-            img=view.findViewById(R.id.img);
+            tenSach = view.findViewById(R.id.tenSach);
+            ngaySinh = view.findViewById(R.id.ngaySinh);
+            quocTich = view.findViewById(R.id.quocTich);
+            img = view.findViewById(R.id.img);
             btRemove = view.findViewById(R.id.btRemove);
             view.setOnClickListener(this);
         }
