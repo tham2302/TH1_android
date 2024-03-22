@@ -10,14 +10,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quản lý sách"
+        android:text="Quản lý báo"
         android:textSize="20dp"
         android:layout_gravity="center"/>
     <EditText
         android:id="@+id/tenSach"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nhập tên sách"
+        android:hint="Nhập tên bài báo"
         android:textSize="12dp"/>
     <EditText
         android:id="@+id/tacGia"
@@ -29,7 +29,7 @@
         android:id="@+id/nxb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nhập ngày xuất bản"
+        android:hint="Nhập giờ đưa tin"
         android:textSize="12dp"/>
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,7 +39,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Thể loại"
+            android:text="Kiểu bài"
             android:textSize="12dp"
             android:layout_weight="1"
             android:layout_gravity="center"/>
@@ -51,19 +51,19 @@
                 android:id="@+id/ck1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Khoa học"
+                android:text="Phê phán"
                 android:textSize="12dp"/>
             <CheckBox
                 android:id="@+id/ck2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tiểu thuyết"
+                android:text="Sự thật"
                 android:textSize="12dp"/>
             <CheckBox
                 android:id="@+id/ck3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Thiếu nhi"
+                android:text="Châm biếm"
                 android:textSize="12dp"/>
         </LinearLayout>
     </LinearLayout>

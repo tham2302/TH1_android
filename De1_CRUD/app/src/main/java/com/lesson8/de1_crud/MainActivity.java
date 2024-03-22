@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,6 +13,7 @@ import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.SearchView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.lesson8.de1_crud.model.Book;
@@ -137,11 +139,14 @@ public class MainActivity extends AppCompatActivity implements BookItemListener,
     }
     public void filter(String s){
         List<Book> filterList=new ArrayList<>();
+        int kt=0;
         for(Book i:adapter.getBackup()){
-            if(i.getTenSach().toLowerCase().contains(s.toLowerCase())){
+            if((s.equalsIgnoreCase("Phe phan") && i.isKhoaHoc())
+                    || (s.equalsIgnoreCase("Su that") && i.isTieuThuyet()) ||
+                    (s.equalsIgnoreCase("Cham biem") && i.isThieuNhi()))
                 filterList.add(i);
-            }
         }
+
         if(filterList.isEmpty()){
             Toast.makeText(this,"No data found", Toast.LENGTH_SHORT).show();
         }
@@ -153,15 +158,14 @@ public class MainActivity extends AppCompatActivity implements BookItemListener,
     @Override
     public void onClick(View view) {
         Calendar c = Calendar.getInstance();
-        int y=c.get(Calendar.YEAR);
-        int m=c.get(Calendar.MONTH);
-        int d=c.get(Calendar.DAY_OF_MONTH);
-        DatePickerDialog dialog= new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+        int hh = c.get(Calendar.HOUR_OF_DAY);
+        int mm = c.get(Calendar.MINUTE);
+        TimePickerDialog timedialog = new TimePickerDialog(this, new TimePickerDialog.OnTimeSetListener() {
             @Override
-            public void onDateSet(DatePicker datePicker, int yy, int mm, int dd) {
-                eNxb.setText(yy+"/"+(mm+1)+"/"+dd);
+            public void onTimeSet(TimePicker timePicker, int h, int m) {
+                eNxb.setText(h + ":" + m);
             }
-        }, y, m, d);
-        dialog.show();
+        }, hh, mm, false);
+        timedialog.show();
     }
 }
