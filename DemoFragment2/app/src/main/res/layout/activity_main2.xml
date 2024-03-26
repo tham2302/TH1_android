@@ -26,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btB"
-        android:text="Add fragment A"
+        android:text="Add fragment B"
         android:layout_below="@+id/tv"
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@+id/btA"/>

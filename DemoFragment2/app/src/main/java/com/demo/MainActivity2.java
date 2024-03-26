@@ -1,10 +1,10 @@
 package com.demo;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.app.Fragment;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,7 +22,7 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         btA=findViewById(R.id.btA);
         btB=findViewById(R.id.btB);
         btA.setOnClickListener(this);
-        btA.setOnClickListener(this);
+        btB.setOnClickListener(this);
     }
 
     @Override
@@ -32,11 +32,11 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         Fragment fg;
         switch(view.getId()){
             case R.id.btA:
-                fg=new FragmentA();
+                fg= new FragmentA();
                 transaction.add(R.id.frame, fg);
                 break;
             case R.id.btB:
-                fg=new FragmentB();
+                fg= new FragmentB();
                 transaction.add(R.id.frame, fg);
                 break;
         }
