@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/addA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add A"
+            android:onClick="addA"/>
+        <Button
+            android:id="@+id/addB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add B"
+            android:onClick="addB"/>
+        <Button
+            android:id="@+id/addC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add C"
+            android:onClick="addC"/>
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:onClick="back"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/removeA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remove A"
+            android:onClick="removeA"/>
+        <Button
+            android:id="@+id/removeB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remove B"
+            android:onClick="removeB"/>
+        <Button
+            android:id="@+id/removeC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remove C"
+            android:onClick="removeC"/>
+        <Button
+            android:id="@+id/popA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pop A"
+            android:onClick="popA"/>
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/frame"
+        android:layout_marginTop="30dp"/>
+
+</LinearLayout>
