@@ -29,15 +29,15 @@ public class MainActivity extends AppCompatActivity {
         transaction.addToBackStack(name);
         transaction.commit();
     }
-    private void addA(View view){
+    public void addA(View view){
         FragmentA fg= new FragmentA();
         add(fg, "fragA", "fa");
     }
-    private void addB(View view){
+    public void addB(View view){
         FragmentB fg= new FragmentB();
         add(fg, "fragB", "fb");
     }
-    private void addC(View view){
+    public void addC(View view){
         FragmentC fg= new FragmentC();
         add(fg, "fragC", "fc");
     }
@@ -47,15 +47,15 @@ public class MainActivity extends AppCompatActivity {
         transaction.remove(fg);
         transaction.commit();
     }
-    private void removeA(View view){
+    public void removeA(View view){
         FragmentA fg=new FragmentA();
         remove(fg, "fragA");
     }
-    private void removeB(View view){
+    public void removeB(View view){
         FragmentB fg=new FragmentB();
         remove(fg, "fragB");
     }
-    private void removeC(View view){
+    public void removeC(View view){
         FragmentC fg=new FragmentC();
         remove(fg, "fragC");
     }
