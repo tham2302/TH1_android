@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -58,7 +59,7 @@ public class FragmentAdd extends Fragment implements CatItemListener {
                     Cat cat=new Cat(img, editName.getText().toString(), price, editDesc.getText().toString());
                     adapter.add(cat);
                 }catch(NumberFormatException e){
-
+                    Toast.makeText(getContext(), "Nhap gia khong hop le", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -75,7 +76,7 @@ public class FragmentAdd extends Fragment implements CatItemListener {
                     btUpdate.setVisibility(View.INVISIBLE);
                     btAdd.setVisibility(View.VISIBLE);
                 }catch(NumberFormatException e){
-
+                    Toast.makeText(getContext(), "Nhap gia khong hop le", Toast.LENGTH_SHORT).show();
                 }
             }
         });

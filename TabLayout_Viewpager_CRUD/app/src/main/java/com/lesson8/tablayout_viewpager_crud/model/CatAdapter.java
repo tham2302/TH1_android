@@ -1,5 +1,6 @@
 package com.lesson8.tablayout_viewpager_crud.model;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.view.LayoutInflater;
@@ -14,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.lesson8.tablayout_viewpager_crud.MainActivity;
 import com.lesson8.tablayout_viewpager_crud.R;
+import com.lesson8.tablayout_viewpager_crud.fragment.FragmentSearch;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,7 +48,7 @@ public class CatAdapter extends RecyclerView.Adapter<CatAdapter.CatViewHolder>{
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CatViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull CatViewHolder holder, @SuppressLint("RecyclerView") int position) {
         Cat cat=mlist.get(position);
         holder.img.setImageResource(cat.getImg());
         holder.name.setText(cat.getName());
@@ -64,6 +66,8 @@ public class CatAdapter extends RecyclerView.Adapter<CatAdapter.CatViewHolder>{
                     public void onClick(DialogInterface dialogInterface, int i) {
                         mlist.remove(position);
                         notifyDataSetChanged();
+                        mainActivity.list=mlist;
+                        FragmentSearch.mlist=mlist;
                     }
                 });
                 builder.setNegativeButton("Khong", new DialogInterface.OnClickListener() {
@@ -86,11 +90,15 @@ public class CatAdapter extends RecyclerView.Adapter<CatAdapter.CatViewHolder>{
     public void update(Cat cat, int position) {
         mlist.set(position, cat);
         notifyDataSetChanged();
+        mainActivity.list=mlist;
+        FragmentSearch.mlist=mlist;
     }
 
     public void add(Cat cat) {
         mlist.add(cat);
         notifyDataSetChanged();
+        mainActivity.list=mlist;
+        FragmentSearch.mlist=mlist;
     }
 
     public class CatViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
