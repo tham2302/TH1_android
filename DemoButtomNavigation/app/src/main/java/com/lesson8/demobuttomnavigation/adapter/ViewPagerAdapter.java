@@ -11,7 +11,7 @@ import com.lesson8.demobuttomnavigation.fragment.Fragment_Noti;
 import com.lesson8.demobuttomnavigation.fragment.Fragment_Search;
 
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
-    private int numPage;
+    private int numPage=4;
     public ViewPagerAdapter(@NonNull FragmentManager fm, int behavior) {
         super(fm, behavior);
     }
