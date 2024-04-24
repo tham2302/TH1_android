@@ -72,13 +72,13 @@ public class UpdateDeleteActivity extends AppCompatActivity implements View.OnCl
             DatePickerDialog dialog=new DatePickerDialog(UpdateDeleteActivity.this, new DatePickerDialog.OnDateSetListener() {
                 @Override
                 public void onDateSet(DatePicker datePicker, int y, int m, int d) {
-                    String date="";
-                    if(m>8){
-                        date=d+"/"+(m+1)+"/"+y;
-                    }
-                    else{
-                        date=d+"/0"+(m+1)+"/"+y;
-                    }
+                    String date= String.format("%02d/%02d/%d", d, m+1, y);
+//                    if(m>8){
+//                        date=d+"/"+(m+1)+"/"+y;
+//                    }
+//                    else{
+//                        date=d+"/0"+(m+1)+"/"+y;
+//                    }
                     eDate.setText(date);
                 }
             }, year, month, day);

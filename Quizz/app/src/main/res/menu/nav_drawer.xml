@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/pdf"
+        android:title="eBook"
+        android:icon="@drawable/ic_pdf"/>
+    <item android:id="@+id/share"
+        android:title="Share App"
+        android:icon="@drawable/ic_share"/>
+    <item android:id="@+id/rate"
+    android:title="Rate us"
+        android:icon="@drawable/ic_rate"/>
+    <item android:id="@+id/about"
+        android:title="About"
+        android:icon="@drawable/ic_info"/>
+
+</menu>

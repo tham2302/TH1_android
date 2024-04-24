@@ -43,7 +43,7 @@ public class FragmentHome extends Fragment implements ItemListener {
         adapter= new RecycleViewAdapter();
         db=new SQLiteHelper(getContext());
         Date d=new Date();
-        SimpleDateFormat f= new SimpleDateFormat("dd/mm/yyyy");
+        SimpleDateFormat f= new SimpleDateFormat("dd/MM/yyyy");
         List<Item> list=db.getByDate(f.format(d));
         adapter.setList(list);
         tvTong.setText("Tong tien: "+tong(list));
@@ -72,7 +72,7 @@ public class FragmentHome extends Fragment implements ItemListener {
     public void onResume() {
         super.onResume();
         Date d=new Date();
-        SimpleDateFormat f= new SimpleDateFormat("dd/mm/yyyy");
+        SimpleDateFormat f= new SimpleDateFormat("dd/MM/yyyy");
         List<Item> list=db.getByDate(f.format(d));
         adapter.setList(list);
         tvTong.setText("Tong tien: "+tong(list));
