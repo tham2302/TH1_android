@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/gray"
+    android:layout_margin="3dp"
+    app:cardCornerRadius="5dp">
+    <LinearLayout
+        android:weightSum="4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="3">
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nguyễn Văn Hiếu"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            />
+        <TextView
+            android:id="@+id/tvKhoiHanh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hà Nội"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            />
+        <TextView
+            android:id="@+id/tvNgayKhoiHanh"
+            android:text="10/05/2024"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+        <CheckBox
+            android:id="@+id/cbThuoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hút thuốc"
+            android:enabled="false"></CheckBox>
+        <CheckBox
+            android:id="@+id/cbAn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ăn sáng"
+            android:enabled="false"></CheckBox>
+        <CheckBox
+            android:id="@+id/cbCaphe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cà phê"
+            android:enabled="false"></CheckBox>
+        <CheckBox
+            android:id="@+id/cbKyGui"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hành lý ký gửi"
+            android:enabled="false"></CheckBox>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
