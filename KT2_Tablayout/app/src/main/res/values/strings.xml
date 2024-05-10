@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">KT2_Tablayout</string>
+    <string-array name="NXB">
+        <item>Giao duc</item>
+        <item>Khoa hoc va xa hoi</item>
+        <item>Buu dien</item>
+        <item>Thong ke</item>
+    </string-array>
+    <!--    <string-array name="Loai">-->
+    <!--        <item>country</item>-->
+    <!--        <item>blue</item>-->
+    <!--        <item>rock</item>-->
+    <!--        <item>pop</item>-->
+    <!--    </string-array>-->
+    <!--    </string-array>-->
+</resources>
