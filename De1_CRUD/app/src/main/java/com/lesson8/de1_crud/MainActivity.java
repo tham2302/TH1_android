@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity implements BookItemListener,
         btAdd = findViewById(R.id.btAdd);
         btUpdate = findViewById(R.id.btUpdate);
         btUpdate.setEnabled(false);
-        searchView=findViewById(R.id.searchView);
+        //searchView=findViewById(R.id.searchView);
     }
 
     @Override

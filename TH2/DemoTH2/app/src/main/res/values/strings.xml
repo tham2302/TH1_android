@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">KT2_Bottom_navigation</string>
+    <string-array name="NXB">
+        <item>Nguyen Manh Son</item>
+        <item>Tran Dinh Que</item>
+        <item>NDP</item>
+        <item>PTQ</item>
+    </string-array>
+    <!--    <string-array name="Loai">-->
+    <!--        <item>country</item>-->
+    <!--        <item>blue</item>-->
+    <!--        <item>rock</item>-->
+    <!--        <item>pop</item>-->
+    <!--    </string-array>-->
+</resources>
