@@ -27,7 +27,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         String sql="CREATE TABLE sach("+
                 "id INTEGER PRIMARY KEY AUTOINCREMENT,"+
                 "ten TEXT,tacgia TEXT,ngay TEXT,gio TEXT," +
-                "hoc INT, cntt INT, vt INT, dt INT," +
+                "hoc INT, cntt INT, vt INT, dt INT,rate INT," +
                 "gia INT)";
         db.execSQL(sql);
         String sql_1="CREATE TABLE sachyeu("+
@@ -66,6 +66,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         values.put("cntt", i.isCNTT() ? 1: 0);
         values.put("vt", i.isVT() ? 1: 0);
         values.put("dt", i.isDT() ? 1: 0);
+        values.put("rate", i.getRating());
         values.put("gia",i.getGia());
         SQLiteDatabase sqLiteDatabase= getWritableDatabase();
         return sqLiteDatabase.insert("sach",null,values);
@@ -81,6 +82,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         values.put("cntt", i.isCNTT() ? 1: 0);
         values.put("vt", i.isVT() ? 1: 0);
         values.put("dt", i.isDT() ? 1: 0);
+        values.put("rate", i.getRating());
         values.put("gia",i.getGia());
         SQLiteDatabase sqLiteDatabase= getWritableDatabase();
         String whereClause="id= ?";

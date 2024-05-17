@@ -161,16 +161,15 @@ public class UpdateDeleteActivity extends AppCompatActivity implements View.OnCl
             int p=0;
             try {
                 p=Integer.parseInt(eGia.getText().toString());
-                if(n.isEmpty() || tg.isEmpty() || h.isEmpty() || d.isEmpty() && (ck1 == false && ck2 == false && ck3 == false)
-                        || (hoc==false && tracuu==false)){
-
-                    ItemDanhSach i=new ItemDanhSach(n, tg, d, h, hoc,tracuu, ck1, ck2, ck3, rate, p);
-                    SQLiteHelper db1=new SQLiteHelper(this);
-                    db1.addItem(i);
-                    finish();
+                if(n.isEmpty() || tg.isEmpty() || h.isEmpty() || d.isEmpty() && (ck1 == false && ck2 == false && ck3 == false)){
+                    Toast.makeText(this, "Nhập đầy đủ dữ liệu", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    Toast.makeText(this, "Nhập đầy đủ dữ liệu", Toast.LENGTH_SHORT).show();
+                    ItemDanhSach i=new ItemDanhSach(n, tg, d, h, hoc,tracuu, ck1, ck2, ck3, rate, p);
+                    i.setId(itemDanhSach.getId());
+                    SQLiteHelper db1=new SQLiteHelper(this);
+                    db1.update(i);
+                    finish();
                 }
             }
             catch (Exception e){

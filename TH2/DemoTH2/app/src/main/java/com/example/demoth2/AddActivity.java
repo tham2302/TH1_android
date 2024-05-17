@@ -120,14 +120,13 @@ public class AddActivity extends AppCompatActivity implements View.OnClickListen
             try {
                 p=Integer.parseInt(eGia.getText().toString());
                 if(n.isEmpty() || tg.isEmpty() || h.isEmpty() || d.isEmpty() || (ck1 == false && ck2 == false && ck3 == false)){
-
+                    Toast.makeText(this, "Nhập đầy đủ dữ liệu", Toast.LENGTH_SHORT).show();
+                }
+                else {
                     ItemDanhSach i=new ItemDanhSach(n, tg, d, h, hoc,tracuu, ck1, ck2, ck3, rate, p);
                     SQLiteHelper db=new SQLiteHelper(this);
                     db.addItem(i);
                     finish();
-                }
-                else {
-                    Toast.makeText(this, "Nhập đầy đủ dữ liệu", Toast.LENGTH_SHORT).show();
                 }
             }
             catch (Exception e){

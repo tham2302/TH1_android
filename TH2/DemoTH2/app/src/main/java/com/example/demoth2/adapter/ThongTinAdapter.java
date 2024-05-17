@@ -44,10 +44,10 @@ public class ThongTinAdapter extends RecyclerView.Adapter<ThongTinAdapter.HomeVi
         ItemThongTin item=list.get(position);
         holder.ten.setText(item.getTen());
         holder.mota.setText(item.getNhanxet());
-//        holder.itemdt_image.setImageResource(imgs[item.getImg()-1]);
-        Glide.with(context)
-                .load(item.getAnh())
-                .into(holder.itemdt_image);
+        holder.itemdt_image.setImageResource(imgs[1]);
+//        Glide.with(context)
+//                .load(item.getAnh())
+//                .into(holder.itemdt_image);
     }
 
     @Override
